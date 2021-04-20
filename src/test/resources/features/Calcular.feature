@@ -14,6 +14,11 @@ Feature: Calculate
     | "7"  | "9"  | "16"           |
     | "3"  | "3"  | "6"            |
 
+  Scenario: Calculate with Test Mass
+    Given that I use the mass "db/massaCalc.csv" to test the calculator App
+    When I perform the operation with two numbers
+    Then it compare the current result with the expected
+
 
 
 
